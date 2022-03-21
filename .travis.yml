@@ -4,7 +4,7 @@ services:
   - docker 
 
 before_install:
-  - docker build -t ltlouie/docker-react -f Dockerfile.dev . 
+  - docker build -t ltlouie/docker-react . 
 
 script:
   - docker run -e CI=true ltlouie/docker-react npm run test
